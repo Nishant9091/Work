@@ -32,16 +32,6 @@ html {
   color: #fff;
 }
 
-.logo {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: system-ui;
-  padding: 1em;
-  z-index: 1000;
-}
-
 .container {
   backdrop-filter: blur(5px);
   width: 100%;
@@ -84,6 +74,7 @@ video {
   left: 0;
   width: 100%;
   padding: 0 6em;
+  transition: 0.5s ease-in-out;
   /* z-index: 1000; */
   /* Add any other styles you need for the fixed navigation */
 }
@@ -95,7 +86,7 @@ video {
   gap: 2rem;
 }
 
-/*  */
+/* logo */
 
 .rotate-box {
   position: fixed;
@@ -103,8 +94,23 @@ video {
   height: 210px;
   display: block;
   z-index: 10;
-  left: -6rem;
-  top: 0rem;
+  left: 50vw;
+  top: 17rem;
+  scale: 3;
+  z-index: 1000;
+}
+
+.rotate-box.top-center {
+  top: 6rem;
+  left: 44%;
+  transform: translateY(-50%);
+  scale: 1 !important;
+  transition: 0.5s ease-in-out;
+}
+.top-content {
+  transform: translateY(-35%);
+  /* scale: 1 !important; */
+  transition: 0.5s ease-in-out;
 }
 
 .rotate-box .icon img {
@@ -121,6 +127,7 @@ video {
   -ms-transform: translate(-100%);
   transform: translate(-100%);
 }
+
 .rotate-box .rotate-text {
   -webkit-animation: rotateText 20s linear infinite;
   animation: rotateText 20s linear infinite;
@@ -132,6 +139,7 @@ video {
   border: 1px solid rgba(153, 153, 153, 0.6);
   border-radius: 50%;
 }
+
 .rotate-box .rotate-circle svg {
   filter: invert(1);
   width: 160px;
@@ -142,6 +150,7 @@ video {
   -ms-transform: scale(1.25);
   transform: scale(1.25);
 }
+
 @-webkit-keyframes rotateText {
   0% {
     -webkit-transform: rotate(360deg);
@@ -590,19 +599,18 @@ ion-icon {
 .quee {
   --marquee-width: 100vw;
   --marquee-height: 20vh;
-  /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(
     var(--marquee-width) / var(--marquee-elements-displayed)
   );
-  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
-}
-
-.quee {
+  --marquee-animation-duration: calc(10s);
   color: #eee;
   overflow: hidden;
   position: relative;
+  margin: 5rem 0;
+  padding-bottom: 5rem;
 }
+
 .quee:before,
 .quee:after {
   position: absolute;
@@ -612,52 +620,45 @@ ion-icon {
   content: "";
   z-index: 1;
 }
+
 .quee:before {
   left: 0;
-  /* background: linear-gradient(to right, #111 0%, transparent 100%); */
 }
+
 .quee:after {
   right: 0;
-  /* background: linear-gradient(to left, #111 0%, transparent 100%); */
 }
+
 .quee-content {
-  margin: 5rem 0;
   list-style: none;
   height: 100%;
   display: flex;
   animation: scrolling var(--marquee-animation-duration) linear infinite;
 }
 
-/* .marquee-content:hover {
-  animation-play-state: paused;
-} */
 @keyframes scrolling {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(
-      calc(-1 * var(--marquee-element-width) * var(--marquee-elements))
+      calc(
+        -1 * var(--marquee-element-width) * (var(--marquee-elements-displayed) -
+              1)
+      )
     );
   }
 }
+
 .quee-content li {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   flex-shrink: 0;
-  /* width: var(--marquee-element-width); */
   max-height: 100%;
-  font-size: calc(var(--marquee-height) * 3 / 4); /* 5rem; */
+  font-size: calc(var(--marquee-height) * 3 / 4);
   white-space: nowrap;
   margin: 0 3rem;
-}
-
-.quee-content li img {
-  width: 100%;
-  /* height: 100%; */
-  /* border: 2px solid #eee; */
 }
 
 @media (max-width: 600px) {
@@ -794,28 +795,31 @@ ion-icon {
 .menu__item-image {
   height: 300px;
   width: 240px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   z-index: 2;
   opacity: 0;
   margin-top: -150px;
-  transform: scale(0.4);
+  transform: scale(0.8);
 }
-.menu__item-image.living,
-.menu__item-image.resting {
-  background-image: url("https://images.unsplash.com/photo-1589834390005-5d4fb9bf3d32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+.menu__item-image.living {
+  background-image: url(Services/assets/imgs/serv-img/1626892549-2-web-development-vs-software-development.avif);
 }
 .menu__item-image.dining {
-  background-image: url("https://images.unsplash.com/photo-1565996939960-f42172c9e2bd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80");
+  background-image: url(Services/assets/imgs/serv-img/photo-1563986768609-322da13575f3.avif);
 }
 .menu__item-image.endulging {
-  background-image: url("https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80");
+  background-image: url(Services/assets/imgs/serv-img/1677436944483.png);
+}
+.menu__item-image.resting {
+  background-image: url(Services/assets/imgs/serv-img/digital-marketing-business-xs94p54uei4ht97l.jpg);
 }
 .menu__item-image.floorplans {
-  background-image: url("https://images.unsplash.com/photo-1575204015311-0fe377370780?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80");
+  background-image: url(Services/assets/imgs/serv-img/united-states-orlando-music-video-music-videos.jpg);
 }
 .menu__item-image.enquiring {
-  background-image: url("https://images.unsplash.com/photo-1540759772348-12e90305e8f4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+  background-image: url(Services/assets/imgs/serv-img/photo-1492684223066-81342ee5ff30.avif);
 }
 
 .Port h1 {
@@ -862,6 +866,7 @@ ion-icon {
 }
 
 /* sommto */
+
 /* .scroll-container,
 .scroll-area {
   width: 100vw;
@@ -878,6 +883,18 @@ ion-icon {
 } */
 
 @media screen and (max-width: 550px) {
+  .quee{
+    margin: 0;
+  }
+  .rotate-box.top-center {
+    left: 9%;
+    top: 0;
+    scale: .5 !important;
+  }
+  .rotate-box {
+    scale: 2 !important;
+    left: 45.5vw;
+  }
   .menu__item-text {
     font-size: 14px;
   }
@@ -893,7 +910,8 @@ ion-icon {
   .swiper-backface-hidden .swiper-slide .content {
     padding: 0;
   }
-  .swiper-slide-active .content h1, .swiper-slide-active .content p{
+  .swiper-slide-active .content h1,
+  .swiper-slide-active .content p {
     font-size: 14px;
   }
   .swiper-slide {
@@ -913,8 +931,6 @@ ion-icon {
     left: 3rem;
   }
 }
-
-
 
 @media screen and (min-width: 550px) and (max-width: 1050px) {
   .menu__item-text {
@@ -937,8 +953,10 @@ ion-icon {
 }
 
 @media screen and (max-width: 320px) {
-  .Port h1{
+  .Port h1 {
     font-size: 4rem;
     left: 3rem;
   }
 }
+
+/* Add this to your existing style.css file */

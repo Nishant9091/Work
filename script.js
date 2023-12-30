@@ -1,32 +1,48 @@
-ScrollTrigger.create({
-    animation: gsap.from(".logo", {
-        y: "16vh",
-        x: "14vh",
-        scale: 3,
-        yPercent: -10,
-    }),
-    scrub: true,
-    trigger: ".content",
-    start: "top bottom",
-    endTrigger: ".content",
-    end: "top center",
+// ScrollTrigger.create({
+//     animation: gsap.from(".logo", {
+//         y: "16vh",
+//         x: "14vh",
+//         scale: 3,
+//         yPercent: -10,
+//     }),
+//     scrub: true,
+//     trigger: ".content",
+//     start: "top bottom",
+//     endTrigger: ".content",
+//     end: "top center",
+// });
+
+
+// script.js
+window.addEventListener('scroll', function() {
+  var rotateBox = document.querySelector('.rotate-box');
+  var bottomDiv = document.querySelector('.bottom');
+  var navContainer = document.querySelector('#nav');
+
+  if (window.scrollY > 10) {
+      rotateBox.classList.add('top-center');
+      bottomDiv.classList.add('top-content');
+      navContainer.classList.add('fixed-nav');
+  } else {
+      rotateBox.classList.remove('top-center');
+      bottomDiv.classList.remove('top-content');
+      navContainer.classList.remove('fixed-nav');
+  }
 });
 
 
+// $(document).ready(function () {
+//     var navContainer = $("#nav");
+//     var navOffset =35; // Adjust this value based on your layout
 
-
-$(document).ready(function () {
-    var navContainer = $("#nav");
-    var navOffset =635; // Adjust this value based on your layout
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > navOffset) {
-            navContainer.addClass("fixed-nav");
-        } else {
-            navContainer.removeClass("fixed-nav");
-        }
-    });
-});
+//     $(window).scroll(function () {
+//         if ($(window).scrollTop() > navOffset) {
+//             navContainer.addClass("fixed-nav");
+//         } else {
+//             navContainer.removeClass("fixed-nav");
+//         }
+//     });
+// });
 
 
 // About
@@ -214,15 +230,16 @@ function animateCircles() {
 animateCircles();
 
 // marquee
-const root = document.documentElement;
-const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-const marqueeContent = document.querySelector("ul.quee-content");
+// const root = document.documentElement;
+// const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+// const marqueeContent = document.querySelector("ul.quee-content");
 
-root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+// root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
-for(let i=0; i<marqueeElementsDisplayed; i++) {
-  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-}
+// for(let i=0; i<marqueeElementsDisplayed; i++) {
+//   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+// }
+
 
 // partner
 let menuItem = document.querySelectorAll(".menu__item-text");
@@ -250,7 +267,7 @@ function moveText(e) {
   gsap.to([...menuImage], {
     css: {
       left: e.pageX + 50,
-      top: e.pageY - 750,
+      top: e.pageY - 130,
     },
     duration: 0.3,
   });
