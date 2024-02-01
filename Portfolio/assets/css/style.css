@@ -25,7 +25,6 @@
     4-17. Responsive
     4-18. Light Color File
 -----------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap");
 @import url("../fonts/bootstrap-icons/font/bootstrap-icons.css");
 @import url("../../plugins/menu/ma5-menu.css");
 @import url("../../plugins/select2/css/select2.css");
@@ -35,10 +34,12 @@
 @import url("../../plugins/aos/aos.css");
 @import url("../../plugins/fancybox/jquery.fancybox.css");
 @font-face {
-  font-family: 'saol_displayregular';
-  src: url("https://wpthemebooster.com/demo/themeforest/html/mrittik/assets/fonts/SaolDisplay/saoldisplay-regular-webfont.woff2") format("woff2"), url("https://wpthemebooster.com/demo/themeforest/html/mrittik/assets/fonts/SaolDisplay/saoldisplay-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Glusp';
+  src: url('../../../assets/font/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Extralight.otf') format('opentype');
+}
+
+body {
+  font-family: 'Glusp', sans-serif; /* Use Glusp for the body text */
 }
 
 .bg-dark-100 {
@@ -143,6 +144,7 @@
 
 .text-olive {
   color: #fff;
+  font-weight: bold;
 }
 
 /*!
@@ -180,7 +182,7 @@
   --mrittik-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --mrittik-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --mrittik-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --mrittik-body-font-family: Montserrat, sans-serif;
+  /* --mrittik-body-font-family: Montserrat, sans-serif; */
   --mrittik-body-font-size: 1rem;
   --mrittik-body-font-weight: 400;
   --mrittik-body-line-height: 1.5;
@@ -217,7 +219,7 @@
 
 body {
   margin: 0;
-  font-family: var(--mrittik-body-font-family);
+  /* font-family: var(--mrittik-body-font-family); */
   font-size: var(--mrittik-body-font-size);
   font-weight: var(--mrittik-body-font-weight);
   line-height: var(--mrittik-body-line-height);
@@ -388,7 +390,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: var(--mrittik-font-monospace);
+  /* font-family: var(--mrittik-font-monospace); */
   font-size: 1em;
 }
 
@@ -484,7 +486,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  /* font-family: inherit; */
   font-size: inherit;
   line-height: inherit;
 }
@@ -2983,7 +2985,7 @@ textarea.form-control-lg {
   --mrittik-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--mrittik-btn-focus-shadow-rgb), .5);
   display: inline-block;
   padding: var(--mrittik-btn-padding-y) var(--mrittik-btn-padding-x);
-  font-family: var(--mrittik-btn-font-family);
+  /* font-family: var(--mrittik-btn-font-family); */
   font-size: var(--mrittik-btn-font-size);
   font-weight: var(--mrittik-btn-font-weight);
   line-height: var(--mrittik-btn-line-height);
@@ -5666,7 +5668,7 @@ fieldset:disabled .btn {
   display: block;
   padding: var(--mrittik-tooltip-arrow-height);
   margin: var(--mrittik-tooltip-margin);
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5783,7 +5785,7 @@ fieldset:disabled .btn {
   z-index: var(--mrittik-popover-zindex);
   display: block;
   max-width: var(--mrittik-popover-max-width);
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7983,7 +7985,7 @@ fieldset:disabled .btn {
 }
 
 .font-monospace {
-  font-family: var(--mrittik-font-monospace) !important;
+  /* font-family: var(--mrittik-font-monospace) !important; */
 }
 
 .fs-1 {
@@ -10848,7 +10850,7 @@ html {
 
 body {
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   color: #000000;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -10911,7 +10913,7 @@ body {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -11231,7 +11233,7 @@ label {
   position: relative;
   width: auto;
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 0.75rem;
   line-height: 1.5rem;
   font-weight: 700;
@@ -11330,7 +11332,7 @@ label {
   position: relative;
   width: auto;
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 0.75rem;
   line-height: 1.5rem;
   font-weight: 700;
@@ -11609,7 +11611,7 @@ label {
   list-style: none;
   display: inline-block;
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.25rem;
@@ -11668,7 +11670,7 @@ label {
 
 .header .mainnav ul.main_menu li ul li.menu-item-has-children > a:after {
   content: "\F285";
-  font-family: 'bootstrap-icons';
+  /* font-family: 'bootstrap-icons'; */
   speak: none;
   position: absolute;
   top: 50%;
@@ -11700,7 +11702,7 @@ label {
 .header .mainnav ul.main_menu > li.menu-item-has-children > a::after {
   content: "\F282";
   color: #ffffff;
-  font-family: 'bootstrap-icons';
+  /* font-family: 'bootstrap-icons'; */
   speak: none;
   transition: all 0.5s ease-in-out;
   display: inline-block;
@@ -12387,7 +12389,7 @@ body.left_menu .mr_menu {
 
 .theme_slider_2 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner h4, .theme_slider_2 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner .h4 {
   position: relative;
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.425rem + 1.8vw);
   font-weight: 400;
   padding-top: calc(2.6875rem + 14.78571vw);
@@ -12561,7 +12563,7 @@ body.left_menu .mr_menu {
 
 .theme_slider_3 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner h4, .theme_slider_3 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner .h4 {
   position: relative;
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.78125rem + 5.46429vw);
   line-height: calc(1.7rem + 4.62857vw);
   font-weight: 400;
@@ -12772,7 +12774,7 @@ body.left_menu .mr_menu {
 
 .theme_slider_4 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner h4, .theme_slider_4 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner .h4 {
   position: relative;
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.78125rem + 5.46429vw);
   line-height: calc(1.7rem + 4.62857vw);
   font-weight: 400;
@@ -13075,7 +13077,7 @@ body.left_menu .mr_menu {
 
 .theme_slider_5 .slider .slide_content h4, .theme_slider_5 .slider .slide_content .h4 {
   position: relative;
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.5625rem + 3.21429vw);
   line-height: calc(1.625rem + 3.85714vw);
   font-weight: 400;
@@ -13109,7 +13111,7 @@ body.left_menu .mr_menu {
 }
 
 .theme_slider_5 .slider .slide_content .details_link {
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.275rem + 0.25714vw);
   line-height: calc(1.325rem + 0.77143vw);
   font-weight: 400;
@@ -13180,7 +13182,7 @@ body.left_menu .mr_menu {
 
 .theme_slider_6 .slider .slide_content .slide_content_wrapper .slide_content_inner h4, .theme_slider_6 .slider .slide_content .slide_content_wrapper .slide_content_inner .h4 {
   position: relative;
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.78125rem + 5.46429vw);
   line-height: calc(1.7rem + 4.62857vw);
   font-weight: 400;
@@ -13398,7 +13400,7 @@ body.left_menu .mr_menu {
 
 .theme_slider_8 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner h4, .theme_slider_8 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner .h4 {
   position: relative;
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.78125rem + 5.46429vw);
   line-height: calc(1.7rem + 4.62857vw);
   font-weight: 400;
@@ -13611,7 +13613,7 @@ body.left_menu .mr_menu {
 
 .theme_slider_9 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner h4, .theme_slider_9 .swiper-slide .slider .slide_content .slide_content_wrapper .slide_content_inner .h4 {
   position: relative;
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.78125rem + 5.46429vw);
   line-height: calc(1.7rem + 4.62857vw);
   font-weight: 400;
@@ -15198,7 +15200,7 @@ body.left_menu .mr_menu {
 .project-list-view .project-list li a {
   position: relative;
   display: block;
-  font-family: "saol_displayregular", sans-serif;
+  /* font-family: "saol_displayregular", sans-serif; */
   font-size: calc(1.525rem + 2.82857vw);
   line-height: calc(1.6688rem + 4.30766vw);
   text-transform: uppercase;
@@ -15977,7 +15979,7 @@ body.left_menu .mr_menu {
 }
 
 .pagination li a {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 0.9375rem;
   color: #ffffff;
   text-align: center;
@@ -16899,7 +16901,7 @@ body.left_menu .mr_menu {
 
 .team-member-information ul.point_order li:before {
   content: '\F26F';
-  font-family: 'bootstrap-icons';
+  /* font-family: 'bootstrap-icons'; */
   font-size: 1.5rem;
   position: absolute;
   left: 0;
@@ -16926,7 +16928,7 @@ body.left_menu .mr_menu {
   position: sticky;
   position: -webkit-sticky;
   top: 30px;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   /*-- Select2 Customize --*/
   /*-- Search --*/
   /*-- Category Dropdown --*/
@@ -17349,7 +17351,7 @@ body.left_menu .mr_menu {
 
 .shop_filtering_method .select2-container--default .select2-selection--single .select2-selection__arrow b::before {
   content: "\F282";
-  font-family: 'bootstrap-icons';
+  /* font-family: 'bootstrap-icons'; */
   font-size: 10px;
 }
 
@@ -17448,7 +17450,7 @@ body.left_menu .mr_menu {
   width: 50px;
   line-height: 24px;
   z-index: 1;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
@@ -17666,7 +17668,7 @@ body.left_menu .mr_menu {
   width: 50px;
   line-height: 24px;
   z-index: 1;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
@@ -17902,7 +17904,7 @@ body.left_menu .mr_menu {
 }
 
 .product_right .product_view_bottom .product_quantity .pproduct_quantity_label {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -18234,7 +18236,7 @@ body.left_menu .mr_menu {
 }
 
 .review_sec ul.review_area .reviewer_div .review_block .reply a {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 17px;
   font-weight: 400;
   color: #fff;
@@ -18251,7 +18253,7 @@ body.left_menu .mr_menu {
 }
 
 .review_sec .reviews-pagination a, .review_sec .reviews-pagination span {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
@@ -18666,7 +18668,7 @@ body.left_menu .mr_menu {
 
 .shipping_form .select2-container--default .select2-selection--single .select2-selection__arrow b::before {
   content: "\F282";
-  font-family: 'bootstrap-icons';
+  /* font-family: 'bootstrap-icons'; */
   font-size: 10px;
 }
 
@@ -19159,7 +19161,7 @@ body.left_menu .mr_menu {
 
 .page_header .page_header_inner .breadcrumb li a:after {
   content: '\F285';
-  font-family: "bootstrap-icons";
+  /* font-family: "bootstrap-icons"; */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -21217,4 +21219,19 @@ body.bg-dark.bg-white .under-construction-page .under-construction-content .sear
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+}
+
+/* offcanvas */
+.offcanvas.offcanvas-top {
+  height: 3rem;
+  font-weight: bold;
+  font-size: 14px;
+  max-height: 100%;
+  background: #ffffff00;
+  backdrop-filter: blur(15px);
+  border: none;
+}
+
+.offcanvas-body{
+  overflow: hidden;
 }

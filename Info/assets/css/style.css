@@ -5,6 +5,14 @@
   Version: 1.0.0
 
 -------------------------------------------------------------*/
+@font-face {
+  font-family: 'Glusp';
+  src: url('fonts/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Extralight.otf') format('opentype');
+}
+
+body {
+  font-family: 'Glusp', sans-serif; /* Use Glusp for the body text */
+}
 
 :root, :root .v-light, :root .v-light-head {
   --bg-color: #f9f9f9;
@@ -60,7 +68,7 @@
   }
 }
 :root {
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Glusp", sans-serif;
   --heading-font: "Excon", sans-serif;
   --font-code: Menlo, monaco, Consolas, Lucida Console, monospace;
   --font-pre: "Courier 10 Pitch", Courier, monospace;
@@ -433,4 +441,24 @@ body:not(.dsn-cursor-effect) #dsn_cursor, body:not(.dsn-cursor-effect) #dsn_curs
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+}
+
+/* offcanvas */
+.offcanvas.offcanvas-top {
+  height: 3rem;
+  font-weight: bold;
+  font-size: 14px;
+  max-height: 100%;
+  background: #ffffff00;
+  backdrop-filter: blur(15px);
+  border: none;
+}
+
+.offcanvas.offcanvas-top a{
+  text-decoration: none;
+  color: white;
+}
+
+.offcanvas-body{
+  overflow: hidden!important;
 }

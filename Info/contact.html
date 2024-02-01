@@ -16,10 +16,21 @@
 
     <link href="assets/css/plugins.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+        integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
-<body class="v-dark dsn-ajax">
+<body class="v-dark dsn-ajax" style="overflow: hidden;">
 
     <div class="rotate-box" data-speed="1" data-lag="0.7">
         <a href="index.html" class="rotate-circle fsz-30 rotate-text d-inline-block text-uppercase">
@@ -29,7 +40,8 @@
                     </path>
                 </defs>
                 <text>
-                    <textPath xlink:href="#textcircle" textLength="900" style="font-size: 1.2rem;"> . Axepert Exhibits . Axepert
+                    <textPath xlink:href="#textcircle" textLength="900" style="font-size: 1.2rem;"> . Axepert Exhibits .
+                        Axepert
                         Exhibits
                     </textPath>
                 </text>
@@ -45,9 +57,9 @@
             <!-- ========== Contact  ========== -->
             <div class="p-relative contact-form over-hidden section-padding" style="height: 100vh;">
                 <div class="dsn-mask p-absolute w-70 left-0 top-0 h-100 background-section"></div>
-                <div class="p-relative container d-grid grid-1-half" data-dsn-gap="30px 60px">
-                    <div class="box-form">
-                        <div class="d-sm-none">
+                <div class="p-relative container d-grid grid-1-half">
+                    <div class="box-form" style="margin-left: 4rem;">
+                        <div class="d-none d-lg-block">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.0451330872543!2d77.15888917527298!3d28.688296481546537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3b9463c4047%3A0x9de6c1b6e2892193!2sAxepert%20Exhibits%20Private%20Limited%20-%20Digital%20Marketing%20and%20Software%20Development%20Services!5e0!3m2!1sen!2sin!4v1700029309725!5m2!1sen!2sin"
                                 width="800px" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
@@ -120,6 +132,29 @@
 
     </main>
 
+    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+        style="      left: 90rem;
+    z-index: 999;
+    top: 1rem;
+    position: fixed;
+    border: none;
+    background: #ffffff00;
+    font-size: 1.5rem;
+    color: #fff;
+    backdrop-filter: blur(15px);
+    border-radius: 80%; 
+    padding: 10px;"><i class="fa-solid fa-bars" style="color: #fff;"></i></button>
+
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-body">
+            <ul class="d-flex justify-content-around align-items-center w-100 text-white list-unstyled">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../Portfolio/Portfolio.html">CREATIONS</a></li>
+                <li><a href="../Services/Services.html">CAPABILITIES</a></li>
+                <li><a href="#">INFO</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- ========== Cursor ========== -->
     <div id="dsn_cursor" class="ball"></div>
